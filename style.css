@@ -25,3 +25,45 @@ nav button{background:#fffdf8;color:#654a51;border-color:#e0cdb8}nav button.on{b
 .return-modal{max-width:460px;text-align:center;padding:45px 28px}
 .return-modal p{line-height:1.75;color:#705b60}.return-icon{font-size:36px;color:var(--gold);margin-bottom:8px}
 .return-modal .btn{display:block;width:100%;margin-top:24px}.quiet{display:block;border:0;background:none;color:#7a686c;margin:16px auto 0;padding:9px}
+
+/* Refinamento responsivo: formulários, preços e navegação em telas estreitas */
+html,body{max-width:100%;overflow-x:clip}
+.modal{box-sizing:border-box;min-width:0}
+.price,.extra{min-width:0}
+.price>span:first-child,.extra>span{min-width:0;overflow-wrap:break-word}
+.price>span:last-child,.price>b:last-child,.extra>b:last-child{white-space:nowrap;flex:0 0 auto;font-variant-numeric:tabular-nums}
+#discountRow{display:grid;grid-template-columns:minmax(0,1fr) max-content;column-gap:12px;align-items:center}
+#discountRow>span:first-child{min-width:0;line-height:1.45}
+#discountRow #discount{white-space:nowrap;word-break:keep-all;overflow-wrap:normal;font-size:14px;font-variant-numeric:tabular-nums;letter-spacing:-.2px;text-align:right}
+.discount-badge{vertical-align:baseline;white-space:nowrap}
+.fields input,.fields textarea{min-width:0;max-width:100%}
+@media(max-width:650px){
+ .overlay{padding:10px;align-items:center}
+ .modal{width:100%;max-height:calc(100dvh - 20px);padding:25px 17px 24px;border-radius:19px}
+ .order-modal h2{font-size:clamp(27px,7vw,36px);line-height:1.2}
+ .extras-heading{font-size:clamp(22px,6vw,27px);line-height:1.25}
+ .extra{gap:11px;padding:15px 0}
+ .extra input{flex:0 0 20px;margin:0}
+ .extra span{font-size:14px;line-height:1.35}
+ .extra b{font-size:13px}
+ .extra small{font-size:11px;line-height:1.45}
+ .price{gap:10px;font-size:14px}
+ .grand{font-size:clamp(21px,6vw,25px)}
+ .grand b:last-child{font-size:inherit}
+ #discountRow{column-gap:9px}
+ #discountRow>span:first-child{font-size:13px}
+ #discountRow #discount{font-size:13px}
+ .discount-badge{padding:4px 6px;font-size:10px;margin-right:3px}
+ .actions{gap:10px}
+ .actions button{min-height:46px}
+ .steps{flex-wrap:wrap;row-gap:8px}
+}
+@media(max-width:360px){
+ .modal{padding:22px 12px}
+ .price,.extra{gap:7px}
+ #discountRow{column-gap:6px}
+ #discountRow #discount{font-size:12px}
+ .discount-badge{font-size:9px}
+ .extra span{font-size:13px}
+ .extra b{font-size:12px}
+}

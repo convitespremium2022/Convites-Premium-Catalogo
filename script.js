@@ -43,7 +43,7 @@ function calc(){
  const subtotal=8990+(s?1990:0)+(a?3990:0)+(r?4990:0),combo=s&&a&&r;
  const total=combo?18000:subtotal;return {s,a,r,subtotal,total,discount:subtotal-total,combo};
 }
-function update(){const p=calc();$('subtotal').textContent=fmt(p.subtotal);$('discountRow').hidden=!p.combo;$('discount').textContent='− '+fmt(p.discount);$('total').textContent=fmt(p.total)}
+function update(){const p=calc();$('subtotal').textContent=fmt(p.subtotal);$('discountRow').hidden=!p.combo;$('discount').textContent='-'+fmt(p.discount);$('total').textContent=fmt(p.total)}
 $('next').onclick=()=>{for(const input of $('step1').querySelectorAll('input,textarea')){if(!input.checkValidity()){input.reportValidity();return}}step(2)};
 $('back').onclick=()=>step(1);
 $('custom').onclick=()=>{selected=null;order()};
