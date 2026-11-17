@@ -1,0 +1,58 @@
+(()=>{
+'use strict';
+const cfg=window.CATALOGO_CONFIG||{modelos:[],whatsapp:''},$=id=>document.getElementById(id);
+const fmt=c=>new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'}).format(c/100);
+let filter='Todos',selected=null;
+const categories=['Todos','Infantil','15 anos','Casamento'];
+function safe(s){try{const u=new URL(s,location.href);return ['https:','http:'].includes(u.protocol)?u.href:''}catch{return ''}}
+function renderFilters(){
+ const n=$('filters');n.replaceChildren();
+ categories.forEach(cat=>{const b=document.createElement('button');b.textContent=cat;b.className=filter===cat?'on':'';b.type='button';b.onclick=()=>{filter=cat;renderFilters();renderCards()};n.append(b)})
+}
+function renderCards(){
+ const n=$('cards');n.replaceChildren();
+ for(const m of (cfg.modelos||[]).filter(m=>filter==='Todos'||m.categoria===filter)){
+  const b=document.createElement('button');b.type='button';b.className='card';
+  const t=document.createElement('div');t.className='thumb';
+  const img=document.createElement('img');img.src=safe(m.imagem);img.alt='Capa: '+m.titulo;img.loading='lazy';t.append(img);
+  const tap=document.createElement('span');tap.textContent='Visualizar convite ↗';t.append(tap);
+  const title=document.createElement('h3');title.textContent=m.titulo;
+  const cat=document.createElement('p');cat.textContent=m.categoria;
+  b.append(t,title,cat);b.onclick=()=>preview(m);n.append(b);
+ }
+}
+function show(id){$(id).hidden=false;document.body.style.overflow='hidden'}
+function hide(id){$(id).hidden=true;if($('preview').hidden&&$('order').hidden)document.body.style.overflow='';if(id==='preview')$('frame').src='about:blank'}
+function preview(m){selected=m;$('previewTitle').textContent=m.titulo;const u=safe(m.link);$('frame').src=u||'about:blank';$('openExternal').href=u||'#';show('preview')}
+function step(n){$('step1').hidden=n!==1;$('step2').hidden=n!==2;$('stepLabel1').classList.toggle('on',n===1);$('stepLabel2').classList.toggle('on',n===2);$('error').textContent=''}
+function order(){hide('preview');$('form').reset();$('form').dataset.modelo=selected?.titulo||'Personalizado';step(1);update();show('order')}
+function calc(){
+ const f=$('form').elements;const s=f.save.checked,a=f.album.checked,r=f.retro.checked;
+ const subtotal=8990+(s?1990:0)+(a?3990:0)+(r?4990:0),combo=s&&a&&r;
+ const total=combo?18000:subtotal;return {s,a,r,subtotal,total,discount:subtotal-total,combo};
+}
+function update(){const p=calc();$('subtotal').textContent=fmt(p.subtotal);$('discountRow').hidden=!p.combo;$('discount').textContent='− '+fmt(p.discount);$('total').textContent=fmt(p.total)}
+$('next').onclick=()=>{for(const input of $('step1').querySelectorAll('input,textarea')){if(!input.checkValidity()){input.reportValidity();return}}step(2)};
+$('back').onclick=()=>step(1);
+$('custom').onclick=()=>{selected=null;order()};
+$('orderPreview').onclick=order;
+document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>hide(b.dataset.close));
+document.querySelectorAll('.overlay').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)hide(o.id)}));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){hide('preview');hide('order')}});
+['save','album','retro'].forEach(n=>$('form').elements[n].addEventListener('change',update));
+$('form').onsubmit=e=>{
+ e.preventDefault();
+ const number=String(cfg.whatsapp||'').replace(/\D/g,'');
+ if(number.length<12){$('error').textContent='Configure o número comercial no config.js para receber pedidos.';return}
+ const f=e.currentTarget.elements,p=calc();
+ const msg=['Olá! Quero solicitar um convite interativo.','','Modelo: '+e.currentTarget.dataset.modelo,
+ 'Nome: '+f.nome.value,'Idade: '+(f.idade.value||'Não se aplica'),'Data: '+f.data.value,
+ 'Horário: '+f.hora.value,'Tema e cores: '+f.tema.value,'',
+ 'Convite: '+fmt(8990),'Save the Date: '+(p.s?fmt(1990):'Não'),
+ 'Álbum + QR Code: '+(p.a?fmt(3990):'Não'),'Retrospectiva: '+(p.r?fmt(4990):'Não')];
+ if(p.combo)msg.push('Subtotal: '+fmt(p.subtotal),'Desconto combo completo (10% OFF): −'+fmt(p.discount));
+ msg.push('TOTAL: '+fmt(p.total));
+ const a=document.createElement('a');a.href='https://wa.me/'+number+'?text='+encodeURIComponent(msg.join('\n'));a.target='_blank';a.rel='noopener noreferrer';document.body.append(a);a.click();a.remove();
+};
+renderFilters();renderCards();update();
+})();
