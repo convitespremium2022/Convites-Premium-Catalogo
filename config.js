@@ -58,6 +58,34 @@ window.CATALOGO_CONFIG = {
       "titulo": "Alice no País das Maravilhas",
       "imagem": "assets/quinze-alice.webp",
       "link": "https://convitespremium2022.github.io/Convites-Premium-Alice-no-pais-das-maravilhas/"
+    },
+    {
+      "id": "doce",
+      "categoria": "Infantil",
+      "titulo": "Mundo doce",
+      "imagem": "doce.webp",
+      "link": "https://convitepremium.github.io/convites-premium-Eloah/"
+    },
+    {
+      "id": "XV-preto-lilas",
+      "categoria": "15 anos",
+      "titulo": "Lilás e preto",
+      "imagem": "XV-lilas-preto.webp",
+      "link": "https://convitepremium.github.io/convites-premium-Carol/"
+    },
+    {
+      "id": "moranguinho",
+      "categoria": "Infantil",
+      "titulo": "Moranguinho",
+      "imagem": "moranguinho.webp",
+      "link": "https://convitepremium.github.io/convites-premium-Liz/"
+    },
+    {
+      "id": "baile-mascara-azul",
+      "categoria": "15 anos",
+      "titulo": "Baile de mascara azul",
+      "imagem": "mascara-azul.webp",
+      "link": "https://convitepremium.github.io/convites-premium-Yasmin-Luiza/"
     }
   ]
 };
