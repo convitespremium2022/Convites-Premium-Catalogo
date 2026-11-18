@@ -63,28 +63,28 @@ window.CATALOGO_CONFIG = {
       "id": "doce",
       "categoria": "Infantil",
       "titulo": "Mundo doce",
-      "imagem": "doce.webp",
+      "imagem": "assets/doce.webp",
       "link": "https://convitepremium.github.io/convites-premium-Eloah/"
     },
     {
       "id": "XV-preto-lilas",
       "categoria": "15 anos",
       "titulo": "Lilás e preto",
-      "imagem": "XV-lilas-preto.webp",
+      "imagem": "assets/XV-lilas-preto.webp",
       "link": "https://convitepremium.github.io/convites-premium-Carol/"
     },
     {
       "id": "moranguinho",
       "categoria": "Infantil",
       "titulo": "Moranguinho",
-      "imagem": "moranguinho.webp",
+      "imagem": "assets/moranguinho.webp",
       "link": "https://convitepremium.github.io/convites-premium-Liz/"
     },
     {
       "id": "baile-mascara-azul",
       "categoria": "15 anos",
       "titulo": "Baile de mascara azul",
-      "imagem": "mascara-azul.webp",
+      "imagem": "assets/mascara-azul.webp",
       "link": "https://convitepremium.github.io/convites-premium-Yasmin-Luiza/"
     }
   ]
