@@ -64,28 +64,28 @@ window.CATALOGO_CONFIG = {
       "categoria": "Infantil",
       "titulo": "Mundo doce",
       "imagem": "assets/doce.webp",
-      "link": "https://convitepremium.github.io/convites-premium-Eloah/"
+      "link": "https://convitespremium2022.github.io/Convites-Premium-Eloah/"
     },
     {
       "id": "XV-preto-lilas",
       "categoria": "15 anos",
       "titulo": "Lilás e preto",
       "imagem": "assets/XV-lilas-preto.webp",
-      "link": "https://convitepremium.github.io/convites-premium-Carol/"
+      "link": "https://convitespremium2022.github.io/Convites-Premium-Carol/"
     },
     {
       "id": "moranguinho",
       "categoria": "Infantil",
       "titulo": "Moranguinho",
       "imagem": "assets/moranguinho.webp",
-      "link": "https://convitepremium.github.io/convites-premium-Liz/"
+      "link": "https://convitespremium2022.github.io/Convites-Premium-Liz/"
     },
     {
       "id": "baile-mascara-azul",
       "categoria": "15 anos",
       "titulo": "Baile de mascara azul",
       "imagem": "assets/mascara-azul.webp",
-      "link": "https://convitepremium.github.io/convites-premium-Yasmin-Luiza/"
+      "link": "https://convitespremium2022.github.io/Convites-Premium-Yasmin-Luiza/"
     }
   ]
 };
