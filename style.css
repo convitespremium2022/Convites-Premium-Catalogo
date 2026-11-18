@@ -83,3 +83,6 @@ html,body{max-width:100%;overflow-x:clip}
 .reviews .review-card p{margin:0;color:#685a5e;line-height:1.7;font-size:14px;overflow-wrap:break-word}
 @media(max-width:980px){.reviews-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.reviews{padding:60px 18px 70px}.reviews-grid{grid-template-columns:1fr;gap:13px}.review-card{padding:19px}}
+
+/* Botão de depoimento: recurso em preparação */
+.review-cta{text-align:center;margin:34px auto 0}.review-cta .btn{cursor:pointer}.review-cta p{margin:14px 0 0;color:#765a64;font-size:14px}.review-cta p[hidden]{display:none}
