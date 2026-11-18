@@ -96,3 +96,17 @@ html,body{max-width:100%;overflow-x:clip}
 .faq{background:#241b29;padding:100px 22px}.faq-layout{max-width:1120px;margin:auto;display:grid;grid-template-columns:.8fr 1.2fr;gap:75px;align-items:start}.faq-intro{position:sticky;top:30px}.faq-intro p{margin-bottom:28px}.faq-items{border-top:1px solid #654d60}.faq-item{border-bottom:1px solid #654d60}.faq-item summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:23px 0;font-weight:600;font-size:15px}.faq-item summary::-webkit-details-marker{display:none}.faq-item summary span{flex:0 0 29px;height:29px;display:grid;place-items:center;border:1px solid #9a778d;border-radius:50%;font-size:20px;color:#e5bca8;transition:transform .2s}.faq-item[open] summary span{transform:rotate(45deg)}.faq-answer{padding:0 44px 22px 0}.faq-answer p{font-size:14px;line-height:1.8;color:#c9bac8;margin:0}.faq-answer strong{color:#f3d3c3}
 @media(max-width:850px){.top-nav{display:none}.hero-layout{grid-template-columns:1fr}.hero{text-align:center;padding:65px 18px 80px}.hero p{margin:0 auto 27px}.hero-actions,.hero-proof{justify-content:center}.hero-showcase{height:380px;max-width:550px;width:100%;margin:auto}.benefits{margin:-20px 18px 0}.service-layout,.faq-layout{grid-template-columns:1fr;gap:25px}.faq-intro{position:static}.faq{padding:70px 20px}}@media(max-width:540px){header{padding:20px 16px}.brand{font-size:12px;letter-spacing:1px}.header-cta{font-size:11px;padding:9px 11px}.hero h1{font-size:clamp(39px,10vw,55px);letter-spacing:-1px}.hero-showcase{height:290px}.hero-cover{border-width:3px;border-radius:12px}.hero-stamp{font-size:12px;padding:12px}.hero-proof{font-size:11px}.benefits{grid-template-columns:1fr}.benefits>div{padding:14px}.benefits>div+div{border-left:0;border-top:1px solid #574252}.services{padding:70px 15px}.base-plan,.extra-panel,.steps-panel{padding:23px}.base-plan h3{font-size:27px}.plan-price strong{font-size:32px}.faq-item summary{font-size:14px}.reviews{padding:65px 15px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+
+/* Ajuste de contraste — seção de apresentação e serviços */
+.hero .hero-copy h1,.hero .hero-copy h1:not(em),.services .section-head h2,.services .base-plan h3,.services .extra-panel h3,.services .steps-panel h3{color:#fff4f0!important}
+.hero .hero-copy h1 em,.services .section-head h2 em{color:#f1c2b0!important}
+.hero .hero-copy p,.services .section-head p{color:#e9dbe6!important}
+.hero .hero-copy small,.services .section-head small{color:#efbba7!important}
+.services .base-plan,.services .extra-panel,.services .steps-panel{color:#f9eff5!important}
+.services .base-plan li,.services .base-plan p,.services .extra-panel strong,.services .extra-panel p,.services .steps-panel strong{color:#f6e8f0!important}
+.services .base-plan li::before{color:#f1cbb7!important}
+.services .extra-list small,.services .process small,.services .extra-note{color:#dfcbd9!important}
+.services .plan-top{color:#f4cfbc!important}
+.services .plan-pill{color:#2d202b!important}
+.services .base-plan .btn{color:#281b25!important}
+@media(max-width:540px){.hero .hero-copy h1{font-size:clamp(38px,10vw,53px)}}
