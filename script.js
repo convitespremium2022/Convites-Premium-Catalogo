@@ -63,13 +63,9 @@ $('form').onsubmit=e=>{
  'Horário: '+f.hora.value,'Tema e cores: '+f.tema.value,'',
  'Convite: '+fmt(8990),'Save the Date: '+(p.s?fmt(1990):'Não'),
  'Álbum + QR Code: '+(p.a?fmt(3990):'Não'),'Retrospectiva: '+(p.r?fmt(4990):'Não')];
- if(p.combo)msg.push('Subtotal: '+fmt(p.subtotal),'Desconto combo completo: −'+fmt(p.discount));
+ if(p.combo)msg.push('Subtotal: '+fmt(p.subtotal),'Desconto combo completo (10% OFF): −'+fmt(p.discount));
  msg.push('TOTAL: '+fmt(p.total));
  const a=document.createElement('a');a.href='https://wa.me/'+number+'?text='+encodeURIComponent(msg.join('\n'));a.target='_blank';a.rel='noopener noreferrer';document.body.append(a);a.click();a.remove();
 };
-const reviewsGrid=document.querySelector('.reviews-grid');
-const scrollReviews=direction=>{if(reviewsGrid){const card=reviewsGrid.querySelector('.review-card');reviewsGrid.scrollBy({left:direction*((card?.getBoundingClientRect().width||330)+17),behavior:'smooth'});}};
-document.getElementById('reviewsPrev')?.addEventListener('click',()=>scrollReviews(-1));
-document.getElementById('reviewsNext')?.addEventListener('click',()=>scrollReviews(1));
 renderFilters();renderCards();update();
 })();
