@@ -25,6 +25,13 @@ window.CATALOGO_CONFIG = {
       "link": "https://convitepremium.github.io/Invitaciones-Premium-Marcos-y-Ana/"
     },
     {
+      "id": "enrolados",
+      "categoria": "15 anos",
+      "titulo": "Enrolados",
+      "imagem": "assets/enrolados.webp",
+      "link": "https://convitespremium2022.github.io/Convites-Premium-Clara-Fernanda/"
+    },
+    {
       "id": "van-gogh",
       "categoria": "15 anos",
       "titulo": "Van Gogh",
