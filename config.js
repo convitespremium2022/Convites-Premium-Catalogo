@@ -46,10 +46,10 @@ window.CATALOGO_CONFIG = {
       "link": "https://convitespremium2022.github.io/Convites-Premium-Maria-Eduarda/"
     },
     {
-      "id": "sem-titulo",
+      "id": "branco",
       "categoria": "15 anos",
       "titulo": "Flores lilás e prata",
-      "imagem": "assets/branco-sem-tema",
+      "imagem": "assets/branco-sem-tema.webp",
       "link": "https://convitespremium2022.github.io/Convites-Premium-Giovana/"
     },
     {
