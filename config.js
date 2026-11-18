@@ -6,21 +6,21 @@ window.CATALOGO_CONFIG = {
     {
       "id": "casamento-daianna-neto",
       "categoria": "Casamento",
-      "titulo": "Daianna & Neto",
+      "titulo": "Jardim imperial",
       "imagem": "assets/casamento-daianna-neto.webp",
       "link": "https://convitepremium.github.io/convites-premium-Daianna-e-Neto/"
     },
     {
       "id": "infantil-ananda",
       "categoria": "Infantil",
-      "titulo": "Ananda — 1 aninho",
+      "titulo": "Jardim encantado",
       "imagem": "assets/infantil-ananda.webp",
       "link": "https://convitespremium2022.github.io/Convites-Premium-Infantil/"
     },
     {
       "id": "casamento-marcos-ana",
       "categoria": "Casamento",
-      "titulo": "Marcos & Ana",
+      "titulo": "Laços eternos",
       "imagem": "assets/casamento-marcos-ana.webp",
       "link": "https://convitepremium.github.io/Invitaciones-Premium-Marcos-y-Ana/"
     },
