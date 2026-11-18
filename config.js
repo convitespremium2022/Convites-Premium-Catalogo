@@ -39,6 +39,20 @@ window.CATALOGO_CONFIG = {
       "link": "https://convitespremium2022.github.io/Convites-Premium-Jeniffer/"
     },
     {
+      "id": "borboletas-lilas",
+      "categoria": "15 anos",
+      "titulo": "Borboletas lilás",
+      "imagem": "assets/borboletas-lilas.webp",
+      "link": "https://convitespremium2022.github.io/Convites-Premium-Maria-Eduarda/"
+    },
+    {
+      "id": "sem-titulo",
+      "categoria": "15 anos",
+      "titulo": "Flores lilás e prata",
+      "imagem": "assets/branco-sem-tema",
+      "link": "https://convitespremium2022.github.io/Convites-Premium-Giovana/"
+    },
+    {
       "id": "quinze-alice",
       "categoria": "15 anos",
       "titulo": "Alice no País das Maravilhas",
