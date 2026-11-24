@@ -16,11 +16,6 @@ ADICIONAR NOVO CONVITE
    "link": URL HTTPS do convite publicado.
 4. Separe os objetos por vírgulas e salve. O filtro "Todos" mostrará todos automaticamente.
 
-Os quatro modelos recebidos já estão cadastrados, com capas locais.
-Se algum convite bloquear exibição dentro de iframe, o cliente poderá clicar em "Abrir convite em outra aba".
-Os depoimentos são um espaço reservado; não foram inventadas avaliações.
-O WhatsApp não foi preenchido porque o número comercial deste catálogo não foi confirmado.
-
-PREÇOS
-Convite R$ 89,90; Save the Date R$ 19,90; Álbum + QR Code R$ 39,90; Retrospectiva R$ 49,90.
-Todos os três adicionais: subtotal R$ 199,60; total promocional R$ 180,00, economia R$ 19,60 (aprox. 9,82%, anunciado como 10% OFF).
+Os 12 modelos originais foram preservados. O convite abre em outra aba; ao retornar, o cliente pode solicitar o modelo. O botão Peça o seu também abre o formulário diretamente.
+O formulário envia modelo, nome, idade (quando aplicável), data, horário e tema pelo WhatsApp, sem preços ou adicionais. O cliente confirma o envio no WhatsApp.
+Número comercial configurado: 5588994897535. Confira antes de publicar.

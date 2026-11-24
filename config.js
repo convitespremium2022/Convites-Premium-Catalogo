@@ -1,7 +1,7 @@
 // Cadastre seu WhatsApp comercial no campo whatsapp, com DDI 55 + DDD + número.
 // Para adicionar convites, copie um item da lista modelos e altere os campos
 window.CATALOGO_CONFIG = {
-  "whatsapp": "",
+  "whatsapp": "5588994897535",
   "modelos": [
     {
       "id": "casamento-daianna-neto",
